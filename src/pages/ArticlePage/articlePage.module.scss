@@ -1,0 +1,10 @@
+@use 'styles' as *;
+
+.wrapperBlocks {
+  padding-top: 120px;
+  background: linear-gradient(180deg, $color-light-green 0%, $color-white 100%);
+
+  @include mobile {
+    padding-top: 40px;
+  }
+}

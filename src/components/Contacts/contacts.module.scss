@@ -1,0 +1,20 @@
+.contacts {
+  width: 1440px;
+  margin: 0 auto;
+  padding: 47px 20px;
+}
+
+.form {
+  position: relative;
+}
+
+.buttonWrapper {
+  max-width: 1400px;
+  padding-bottom: 170px;
+
+  button {
+      position: absolute;
+      top: 130px;
+      right: 20px;
+  }
+}

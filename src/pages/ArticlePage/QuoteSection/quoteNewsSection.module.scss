@@ -1,0 +1,152 @@
+@use 'styles' as *;
+
+.quoteNewsSection {
+  width: 100%;
+  height: 100%;
+  padding: 50px 0;
+  overflow-x: hidden;
+}
+
+.containerWrapper {
+  @include container;
+}
+.header {
+  position: relative;
+}
+.topText {
+  display: flex;
+  align-items: flex-start;
+}
+.quote {
+  position: absolute;
+  left: 20px;
+}
+.autorsName {
+  font-size: 14px;
+  font-weight: 700;
+  line-height: -14.45px;
+  letter-spacing: -3%;
+  color: $color-dark-gray;
+  position: absolute;
+  left: 20px;
+  width: 100%;
+  top: -40px;
+  @include mobileMobileFirst {
+    padding-left: calc(25.7% + 20px);
+    position: static;
+    @include boldText20;
+  }
+}
+.subtitle {
+  @include boldText22;
+  text-indent: 27.7%;
+  padding-left: 20px;
+  padding-top: 20px;
+  font-weight: 700;
+  @include mobileMobileFirst {
+    padding-right: 75px;
+    @include mediumText64;
+  }
+}
+.carouselWrapper {
+  width: 100%;
+  margin: 50px auto;
+  @include mobileMobileFirst {
+    width: 100%;
+    margin: 100px 0 50px 0;
+  }
+}
+.carousel {
+  width: 100%;
+  margin: 0 auto;
+  height: 200px;
+  position: relative;
+  @media (min-width: 450px) {
+    width: 95%;
+    height: 300px;
+  }
+  @include mobileMobileFirst {
+    width: 90%;
+    margin-left: 20px;
+    height: 100%;
+    height: 450px;
+  }
+  @include tabletMobileFirst {
+    width: 85%;
+    margin-left: 20px;
+    height: 700px;
+  }
+}
+.card {
+  position: absolute;
+  top: 0;
+  left: 10px;
+  z-index: 5;
+  width: 100%;
+  max-width: 300px;
+  height: auto;
+  @include mobileMobileFirst {
+    width: 100%;
+    height: auto;
+    left: 30px;
+    max-width: none;
+  }
+  @media (min-width: 450px) {
+    max-width: 80%;
+    left: 10px;
+  }
+}
+.card_active {
+  z-index: 10;
+  top: 22px;
+  left: 50px;
+  @include mobileMobileFirst {
+    top: 40px;
+    left: 128px;
+    // max-width: 90%;
+    // max-height: 400px;
+  }
+}
+.description {
+  padding: 0 20px;
+  @include mobileMobileFirst {
+    padding: 80px 20px;
+  }
+}
+.containerText {
+  max-width: 700px;
+  width: 100%;
+  margin: 0 auto;
+  p {
+    font-size: 14px;
+    line-height: 120%;
+    letter-spacing: -3%;
+    color: $color-black;
+    letter-spacing: -0.6px;
+    &:nth-child(1) {
+      padding-left: 30%;
+    }
+    &:nth-child(2) {
+      text-indent: 30%;
+    }
+    &:nth-child(3) {
+      padding-right: 30%;
+    }
+  }
+  @include mobileMobileFirst {
+    p {
+      @include mediumText20;
+      color: $color-black;
+      letter-spacing: -0.6px;
+      &:nth-child(1) {
+        padding-left: 250px;
+      }
+      &:nth-child(2) {
+        text-indent: 250px;
+      }
+      &:nth-child(3) {
+        padding-right: 250px;
+      }
+    }
+  }
+}

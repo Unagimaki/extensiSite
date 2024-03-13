@@ -1,0 +1,48 @@
+@use 'styles' as *;
+
+.sectionDescription {
+  margin-left: 10px;
+  margin-right: 10px;
+}
+.container {
+  @include container;
+  padding: 100px 20px 20px 20px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  border-bottom: 1px solid $color-black;
+  @include mobileMobileFirst {
+    padding: 130px 0 67px;
+  }
+}
+.text {
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 120%;
+  letter-spacing: -3%;
+  width: 100%;
+  max-width: 700px;
+  &:first-child {
+    padding-left: 30%;
+  }
+  &:nth-child(2) {
+    text-indent: 30%;
+  }
+  &:last-child {
+    padding-right: 30%;
+  }
+  @include mobileMobileFirst {
+    width: 70%;
+    @include mediumText20;
+    &:first-child {
+      padding-left: 250px;
+    }
+    &:nth-child(2) {
+      text-indent: 250px;
+    }
+    &:last-child {
+      padding-right: 250px;
+    }
+  }
+}

@@ -1,0 +1,58 @@
+@use "styles" as *;
+
+.contactSection {
+  background: linear-gradient(
+    180deg,
+    rgba(255, 119, 83, 0) 0%,
+    rgb(255, 119, 83) 100%
+  );
+  .container {
+    @include container;
+    border-top: 1px solid $color-black;
+    height: 100%;
+    padding: 88px 20px 86px 20px;
+    .header {
+      margin-bottom: 90px;
+      text-align: center;
+      position: relative;
+      .text {
+        @include boldText40;
+        &.textBottom {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        }
+        .marginLeftText {
+          transform: translateX(-30px);
+          margin-right: 90px;
+        }
+      }
+      .imageWrapper {
+        width: 100%;
+        position: absolute;
+        top: -65px;
+        z-index: 1;
+        .image {
+          transform: translateX(-140px);
+        }
+      }
+    }
+    .inputWrapper {
+      display: flex;
+      gap: 18px;
+      .input {
+        width: 90%;
+        border: none;
+        font-size: 22px;
+      }
+      .button{
+        margin-right: 20px;
+      }
+    }
+  }
+}
+
+.zIndex {
+  position: relative;
+  z-index: 5;
+}

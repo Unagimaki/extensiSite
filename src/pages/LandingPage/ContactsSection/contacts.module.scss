@@ -1,0 +1,111 @@
+@use "styles" as *;
+
+.contacts {
+  padding: 60px 20px;
+  max-width: 1440px;
+  margin: 0 auto;
+
+  @include mobileMobileFirst {
+    padding: 100px 20px;
+    margin-bottom: 50px;
+  }
+}
+
+.label {
+  position: relative;
+  margin-bottom: 15px;
+
+  .labelText {
+    display: flex;
+    font-size: 14px;
+    line-height: 120%;
+    letter-spacing: -3%;
+
+    @include mobileMobileFirst {
+      font-size: 40px;
+    }
+  }
+
+  .picture {
+    position: absolute;
+    top: -20px;
+    left: 75px;
+    width: 32.01px;
+    height: 67.97px;
+    .image {
+      width: 100%;
+      height: 100%;
+    }
+  }
+  @include mobileMobileFirst {
+    margin-bottom: 35px;
+    .picture {
+      width: 170px;
+      height: 350px;
+      top: -150px;
+      left: 190px;
+    }
+  }
+}
+
+.form {
+  width: 100%;
+  height: 33px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  justify-content: space-between;
+  .input {
+    width: 85%;
+    height: 100%;
+    border: 0.49px solid rgb(0, 0, 0);
+    padding: 13px;
+
+    &::placeholder {
+      font-size: 8px;
+      font-weight: 502;
+      line-height: 8px;
+      letter-spacing: -3%;
+    }
+  }
+
+  .button {
+    width: 46.4px;
+    height: 45.9px;
+
+    .decor {
+      padding: 10px;
+      right: -13px;
+    }
+  }
+
+  @include mobileMobileFirst {
+    height: 100px;
+    gap: 18px;
+    .input {
+      width: 90%;
+      height: 100%;
+      padding: 26px;
+
+      &::placeholder {
+        order: 2px solid rgb(0, 0, 0);
+        font-size: 20px;
+        font-weight: 502;
+        line-height: 21px;
+        letter-spacing: -3%;
+      }
+    }
+
+    .button {
+      width: 90px;
+      padding: 45px 0;
+      margin-right: 10px;
+      
+      .decor {
+        padding: 20px;
+        right: -25px;
+        top: -25px;
+      }
+    }
+  }
+}

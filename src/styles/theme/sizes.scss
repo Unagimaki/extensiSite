@@ -1,0 +1,25 @@
+// Example of mixin
+
+$container-desktop-padding: 30px;
+$container-tablet-padding: 30px;
+$container-mobile-padding: 15px;
+
+$checkbox-size: 15px;
+
+@mixin container {
+  max-width: 1440px;
+  width: 100%;
+  margin: 0 auto;
+
+  padding: $container-desktop-padding 0;
+
+  //@include tablet-laptop {
+  //  padding-left: $container-tablet-padding;
+  //  padding-right: $container-tablet-padding;
+  //}
+  //
+  //@include mobile {
+  //  padding-left: $container-mobile-padding;
+  //  padding-right: $container-mobile-padding;
+  //}
+}

@@ -1,0 +1,386 @@
+@use 'styles' as *;
+
+.wrapper {
+  background-color: $color-orange;
+}
+
+.container {
+  @include container;
+  display: flex;
+  flex-direction: column;
+  padding: 0 22px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.tooltipImage {
+  -webkit-mask-image: url("../../../../public/assets/icons/News1.svg");
+  mask-repeat: no-repeat;
+  mask-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.tooltipImage2 {
+  -webkit-mask-image: url("../../../../public/assets/icons/News2.svg");
+  mask-repeat: no-repeat;
+  mask-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.gridNews {
+  & > div {
+    border-bottom: 1px solid $color-black;
+  }
+
+  & > div:nth-child(4) {
+    border-left: 1px solid $color-black;
+    padding-left: 24px;
+  }
+}
+
+.titleWrapper {
+  border-bottom: 1px solid $color-black;
+  padding: 12px 0;
+
+  .title {
+    font-size: 90px;
+    font-weight: 800;
+    line-height: 120%;
+    text-align: center;
+    letter-spacing: -3%;
+
+    @include mobileMobileFirst {
+      width: 90%;
+      margin-left: auto;
+      @include extraBoldText140;
+    }
+  }
+
+  @include mobileMobileFirst {
+    padding: 32px 0;
+  }
+}
+
+.flex {
+  display: flex;
+}
+
+.image1 {
+  display: flex;
+
+  @include mobile {
+    width: 265px;
+    height: 160px;
+    margin-left: auto;
+  }
+
+  @include tablet {
+    width: 265px;
+    height: 160px;
+    margin-left: auto;
+  }
+
+  @include big-tablet {
+    width: 295px;
+    height: 190px;
+    align-items: center;
+  }
+
+  @include tabletMobileFirst {
+    width: 462px;
+    height: 281px;
+    padding-right: 133px;
+    align-items: center;
+  }
+}
+
+.image2 {
+  display: flex;
+
+  @include mobile {
+    width: 265px;
+    height: 160px;
+    margin-right: auto;
+  }
+
+  @include tablet {
+    width: 265px;
+    height: 160px;
+    margin-right: auto;
+  }
+
+  @include big-tablet {
+    width: 295px;
+    height: 190px;
+    align-items: center;
+  }
+
+  @include tabletMobileFirst {
+    width: 462px;
+    height: 281px;
+    padding-right: 133px;
+    align-items: center;
+  }
+
+  @media (min-width: 1440px) {
+    width: 502px;
+    height: 321px;
+  }
+}
+
+.image {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  cursor: pointer;
+  text-align: center;
+
+  svg {
+    width: 70%;
+    margin: 0 auto;
+    max-width: 500px;
+  }
+
+  &.image1 {
+    width: 80%;
+    margin-left: auto;
+
+    svg {
+      width: 100%;
+    }
+  }
+
+  &.image2 {
+    width: 80%;
+    margin-right: auto;
+
+    svg {
+      width: 100%;
+    }
+  }
+
+  @include mobileMobileFirst {
+    width: 40%;
+
+    &.image1 {
+      width: 40%;
+
+      svg {
+        width: 70%;
+      }
+    }
+
+    &.image2 {
+      width: 40%;
+
+      svg {
+        width: 70%;
+      }
+    }
+  }
+}
+
+.newsTitle {
+  @include regularText32;
+  margin-bottom: 32px;
+}
+
+.newsSubtitle {
+  @include boldText40;
+}
+
+.newsBlock {
+  width: 100%;
+  cursor: pointer;
+  height: 100%;
+
+  .newsTitle {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 14px;
+    letter-spacing: -3%;
+    padding: 0;
+    margin-bottom: 12px;
+  }
+
+  .newsSubtitle {
+    font-size: 22px;
+    font-weight: 700;
+    line-height: 95%;
+    letter-spacing: -4%;
+  }
+
+  @include mobileMobileFirst {
+    width: 60%;
+    padding: 75px 0;
+
+    .newsTitle {
+      font-size: 32px;
+      font-weight: 400;
+      line-height: 33px;
+      letter-spacing: -3%;
+
+      @include big-tablet {
+        @include boldText20;
+        max-width: 350px;
+        margin-left: auto;
+      }
+    }
+
+    .newsSubtitle {
+      font-size: 40px;
+      font-weight: 700;
+      line-height: 95%;
+      letter-spacing: -4%;
+
+      @include big-tablet {
+        @include boldText22;
+        max-width: 350px;
+        margin-left: auto;
+      }
+
+      @include laptop {
+        @include boldText30;
+      }
+
+      @media (min-width: 1440px) {
+        @include boldText40;
+        max-width: 595px;
+      }
+    }
+  }
+}
+
+.buttonBlock {
+  width: 100%;
+  height: 100%;
+  padding: 50px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  @include mobileMobileFirst {
+    width: 60%;
+    height: 200px;
+    padding: 0;
+  }
+}
+
+.newsItem {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  padding: 0;
+  padding: 20px 0;
+
+  @include mobileMobileFirst {
+    flex-direction: row;
+    gap: 0;
+    padding: 24px 16px;
+  }
+}
+
+.newsBottom {
+  & > div:nth-child(1) {
+    order: 1;
+  }
+
+  & > div:nth-child(2) {
+    order: 2;
+  }
+
+  @include mobileMobileFirst {
+    & > div:nth-child(1) {
+      order: 2;
+    }
+
+    & > div:nth-child(2) {
+      order: 1;
+    }
+  }
+}
+
+.newsSliderViewport {
+  overflow: hidden;
+}
+
+.newsSlider {
+  width: 100%;
+  margin: 0;
+  display: flex;
+
+  .newSliderItem {
+    flex: 0 0 100%;
+    padding: 24px 24px 24px 0;
+    cursor: pointer;
+
+    &:last-child {
+      border-right: none;
+    }
+
+    .newsTitle {
+      font-size: 14px;
+      font-weight: 400;
+      line-height: 14px;
+      letter-spacing: -3%;
+      margin-bottom: 12px;
+    }
+
+    .newsSubtitle {
+      font-size: 22px;
+      font-weight: 700;
+      line-height: 95%;
+      letter-spacing: -4%;
+    }
+
+    @include mobileMobileFirst {
+      flex: 0 0 50%;
+      border-right: 1px solid $color-black;
+      padding: 75px 24px;
+
+      .newsTitle {
+        font-size: 32px;
+        font-weight: 400;
+        line-height: 33px;
+        letter-spacing: -3%;
+
+        @include big-tablet {
+          @include boldText20;
+          max-width: 350px;
+          margin-left: auto;
+        }
+      }
+
+      .newsSubtitle {
+        font-size: 40px;
+        font-weight: 700;
+        line-height: 95%;
+        letter-spacing: -4%;
+
+        @include big-tablet {
+          @include boldText22;
+          max-width: 350px;
+          margin-left: auto;
+        }
+
+        @include laptop {
+          @include boldText30;
+        }
+
+        @media (min-width: 1440px) {
+          @include boldText40;
+          max-width: 595px;
+        }
+      }
+    }
+  }
+}

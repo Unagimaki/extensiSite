@@ -1,0 +1,111 @@
+@use 'styles' as *;
+
+// контейнер чекбокса
+.checkboxWrap {
+  display: flex;
+  width: max-content;
+  height: max-content;
+}
+
+// общие стили чекбоксов
+.checkbox {
+  display: none;
+}
+
+.label {
+  display: inline-block;
+  order: 1;
+}
+
+.fakeCheckbox {
+  display: flex;
+  align-items: center;
+  position: relative;
+  cursor: pointer;
+  width: 100%;
+  height: 100%;
+}
+
+.checkmark {
+  opacity: 0;
+  transition: 0.2s;
+  display: flex;
+  align-items: center;
+}
+
+///// Варианты стилей для чкбокса
+
+//// квадратный чекбокс
+.Quad {
+  .label {
+    border: 1px solid black;
+    width: 20px;
+    height: 20px;
+  }
+  .fakeCheckbox {
+    justify-content: center;
+  }
+
+  .checkmark {
+    width: 80%;
+    height: 80%;
+
+    svg {
+      width: 100%;
+    }
+  }
+
+  .checkbox:checked + .fakeCheckbox > .checkmark {
+    opacity: 1;
+  }
+}
+// круглый чекбокс
+.Circle {
+  .label {
+    border: 1px solid black;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+  }
+  .fakeCheckbox {
+    justify-content: center;
+    padding: 3px 3px 2px 2px;
+  }
+
+  .checkmark {
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    border-radius: 50%;
+  }
+
+  .checkbox:checked + .fakeCheckbox > .checkmark {
+    opacity: 1;
+  }
+}
+
+// Toggle чекбокс
+.Toggle {
+  .label {
+    border: 1px solid black;
+    border-radius: 20px;
+    width: 34px;
+    height: 20px;
+  }
+
+  .fakeCheckbox {
+    padding: 3px 3px 2px 2px;
+  }
+
+  .checkmark {
+    width: 50%;
+    height: 100%;
+    background-color: black;
+    opacity: 1;
+    border-radius: 50%;
+  }
+
+  .checkbox:checked + .fakeCheckbox {
+    justify-content: end;
+  }
+}

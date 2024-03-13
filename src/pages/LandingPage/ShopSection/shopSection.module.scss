@@ -1,0 +1,98 @@
+@use 'styles' as *;
+
+.wrapper {
+  width: 100%;
+  height: 100%;
+  background-color: $color-white;
+  display: none;
+  @media (min-width: 800px) {
+    display: block;
+  }
+}
+
+.container {
+  @include container;
+  display: flex;
+  gap: 30px;
+  justify-content: space-between;
+}
+
+.descriptionBlock {
+  max-width: 500px;
+  width: 50%;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  .descriptionBlockImage {
+    width: 100%;
+    height: 50%;
+    position: absolute;
+    bottom: -30%;
+    left: -30%;
+    display: flex;
+    justify-content: start;
+    align-items: end;
+    @media (min-width: 1000px) {
+      bottom: -50px;
+      left: -100px;
+    }
+  }
+}
+
+.title {
+  @include extraBoldText140;
+  color: $color-orange;
+}
+
+.subtitleBlock {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  @include boldText40;
+}
+
+.firstStr {
+  margin: 0 0 0 5%;
+}
+
+.scndtStr {
+  // margin: -5px 0 0 0;
+}
+
+.thdStr {
+  // margin: -5px 0 0 70px;
+}
+
+.picturesBlock {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  width: 50%;
+  padding-top: 70px;
+  padding-bottom: 101px;
+}
+
+.picture {
+  .image {
+    min-width: 200px;
+  }
+  &.firstImage {
+    width: 50%;
+    height: 100%;
+  }
+  &.lastImage {
+    -webkit-clip-path: polygon(0 16%, 100% 0, 100% 100%, 0 86%);
+    clip-path: polygon(0 16%, 100% 0, 100% 100%, 0 86%);
+    width: 50%;
+    height: 100%;
+  }
+}
+
+.btn {
+  position: absolute;
+  right: 0;
+}

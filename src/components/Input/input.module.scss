@@ -1,0 +1,14 @@
+@use 'styles' as *;
+
+
+.input {
+  padding: 30px 43px;
+  border: 2px solid $color-black;
+  border-radius: 200px;
+  width: auto;
+}
+
+.input::placeholder {
+  @include placeholder;
+  letter-spacing: -0.03em;
+}

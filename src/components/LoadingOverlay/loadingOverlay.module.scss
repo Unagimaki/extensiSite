@@ -1,0 +1,61 @@
+.loadingOverlay {
+  background: linear-gradient(
+    0deg,
+    rgba(255, 248, 206, 1) 0%,
+    rgba(232, 255, 167, 1) 100%
+  );
+  width: 100vw;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s ease;
+  z-index: 10000;
+  display: none;
+  &.show {
+    opacity: 1;
+    visibility: visible;
+    display: block;
+  }
+  .container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .loading {
+    width: 100%;
+    height: 50%;
+    max-width: 300px;
+    div {
+      border-radius: 50%;
+      border-top: 2px solid #000;
+      border-left: 2px solid transparent;
+      border-bottom: 2px solid #000;
+      border-right: 2px solid transparent;
+      animation: rotate 10s linear infinite;
+    }
+    div#first {
+      width: 300px;
+      height: 300px;
+      margin: auto;
+      margin-top: 100px;
+    }
+    div:not(#first) {
+      width: 75%;
+      height: 75%;
+      position: relative;
+      top: 15%;
+      left: 15%;
+    }
+  }
+}
+
+@keyframes rotate {
+  100% {
+    transform: rotate(-360deg);
+  }
+}

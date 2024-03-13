@@ -1,0 +1,89 @@
+@use 'styles' as *;
+
+.button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  text-align: center;
+  cursor: pointer;
+  border: none;
+  z-index: 1;
+  border-radius: 100%;
+  width: 45px;
+  height: 45px;
+
+  @include mobileMobileFirst {
+    width: 90px;
+    height: 90px;
+  }
+
+  &:hover {
+    opacity: 0.7;
+  }
+}
+
+.decor {
+  position: absolute;
+  border-radius: 100%;
+  top: -9px;
+  right: -14px;
+  width: 30px;
+  height: 30px;
+
+  @include mobileMobileFirst {
+    top: -18px;
+    right: -36px;
+    width: 60px;
+    height: 60px;
+  }
+}
+
+.white {
+  background: $color-white;
+
+  .icon {
+    path {
+      stroke: $color-black;
+    }
+    &.arrow {
+      path {
+        fill: $color-black;
+      }
+    }
+  }
+
+  .decor {
+    background: $color-white;
+  }
+}
+
+.black {
+  background: $color-black;
+  @include mobileMobileFirst {
+    position: relative;
+  }
+  .icon {
+    path {
+      stroke: $color-white;
+    }
+    &.arrow {
+      path {
+        fill: $color-white;
+      }
+    }
+  }
+
+  .decor {
+    background: $color-black;
+  }
+}
+
+.icon {
+  width: 20px;
+  height: 20px;
+  @include mobileMobileFirst {
+    width: 45px;
+    height: 45px;
+  }
+}

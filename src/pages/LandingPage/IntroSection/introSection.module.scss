@@ -1,0 +1,38 @@
+@use 'styles' as *;
+
+.introSection {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.videoWrapper {
+  .video {
+    width: 100%;
+    height: 100%;
+  }
+  video::-webkit-media-controls {
+    display: none !important;
+  }
+}
+
+.linkBlock {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  width: 100%;
+  height: 200px;
+  background: linear-gradient(
+    0deg,
+    #fff 34.63%,
+    rgba(255, 255, 255, 0) 103.88%
+  );
+  bottom: 0;
+  @include boldText22;
+  letter-spacing: -0.66px;
+  @include mobileMobileFirst{
+    height: 250px;
+  }
+}

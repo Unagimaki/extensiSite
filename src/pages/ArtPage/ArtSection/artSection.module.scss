@@ -1,0 +1,102 @@
+@use "styles" as *;
+
+.artSection {
+  @include container;
+  padding-bottom: 0;
+}
+
+.header {
+  margin: 0 20px;
+  .headerContainer {
+    border-bottom: 1px solid $color-black;
+    padding-bottom: 21px;
+  }
+  .title {
+    @include extraBoldText140;
+    margin-bottom: 5px;
+    letter-spacing: -10px;
+    text-align: center;
+    margin-top: 60px;
+  }
+}
+
+.container {
+  display: flex;
+  flex-direction: row;
+  margin-left: 20px;
+  .leftSideContainer {
+    width: 30%;
+    padding-top: 46px;
+    .imageWrapper {
+      width: 100%;
+      height: 60%;
+      position: relative;
+      padding: 0;
+    }
+
+    .textContainer {
+      height: 40%;
+    }
+    .poster {
+      font-size: 20px;
+      color: $color-mid-gray;
+      padding-top: 26px;
+    }
+
+    .artist {
+      padding-top: 26px;
+      font-size: 52px;
+      font-weight: 700;
+      line-height: 120%;
+      letter-spacing: -3%;
+      display: flex;
+      flex-wrap: wrap;
+      .name , span {
+        font-size: 52px;
+        font-weight: 700;
+        line-height: 120%;
+        letter-spacing: -3%;
+      }
+    }
+
+    .price {
+      font-size: 20px;
+      font-weight: 500;
+      line-height: 120%;
+      letter-spacing: -3%;
+    }
+  }
+
+  .verticalLine {
+    height: 856px;
+    border-left: 1px solid $color-black;
+    margin-left: 130px;
+  }
+
+  .multipieImages {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    flex-grow: 1;
+    overflow: hidden;
+    .mainImage {
+      z-index: 1;
+      width: 50%;
+      height: 50%;
+      position: relative;
+      img {
+        height: auto;
+      }
+    }
+
+    .animateImages {
+      position: absolute;
+      height: 50%;
+      width: 50%;
+      img {
+        height: auto;
+      }
+    }
+  }
+}

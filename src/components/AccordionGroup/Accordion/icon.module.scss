@@ -1,0 +1,9 @@
+@use 'styles' as *;
+
+.icon {
+  transition: transform 0.3s ease-in-out;
+}
+
+.iconOpened {
+  transform: rotate(180deg);
+}

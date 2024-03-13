@@ -1,0 +1,141 @@
+@use 'styles' as *;
+
+// common select height
+$select_height: 20px;
+
+// component wrap for position error and label
+.selectWrap {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  background-color: transparent;
+  position: relative;
+}
+
+// select container
+.selectContainer {
+  position: relative;
+
+  display: flex;
+  justify-content: space-between;
+  height: $select_height;
+
+  background-color: $color-white;
+
+  // add you style for common styling select weight and bg color or more
+}
+
+// select
+.select {
+  padding: 0;
+  margin: 0;
+  outline: none;
+  width: 100%;
+  cursor: pointer;
+  overflow: hidden;
+  overflow-x: auto;
+
+  display: flex;
+  align-items: center;
+
+  // add scroll style
+}
+
+// select arrow styles
+.arrow {
+  height: $select_height;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  padding: 0 5px;
+  background-color: transparent;
+  border: none;
+}
+// select arrow rotate
+.arrowUp {
+  transform: rotate(180deg);
+}
+.arrowInverse {
+  transform: rotate(180deg);
+}
+
+// changed value and icon styles
+.multiValue,
+.icon {
+  position: relative;
+
+  line-height: 20px;
+  height: $select_height;
+
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+}
+
+// drop down menu with options
+.options {
+  display: flex;
+  flex-direction: column;
+
+  position: absolute;
+  z-index: 10;
+
+  background-color: white;
+  width: 100%;
+  max-height: 100px;
+  overflow: hidden;
+  overflow-y: auto;
+  // this add you styles for drop menu
+}
+
+// menu open side
+.openBottom {
+  top: $select_height;
+}
+
+.openTop {
+  bottom: $select_height;
+}
+
+// drop down menu option ITEM
+.option {
+  border: none;
+  padding: 0;
+  background-color: transparent;
+  cursor: pointer;
+
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  // this add your styles for option item
+
+  &:hover {
+    background-color: #e5e5e5;
+  }
+}
+
+// select label
+.label {
+  background-color: transparent;
+  // add you styles for label
+}
+
+// select error
+.error {
+  position: absolute;
+  line-height: 10px;
+
+  // add you styles for error
+  font-size: 10px;
+  color: red;
+}
+
+//error view side
+.errorBottom {
+  bottom: -10px;
+}
+.errorTop {
+  top: -10px;
+}

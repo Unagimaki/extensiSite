@@ -1,0 +1,64 @@
+@use 'styles' as *;
+
+.accordion {
+  background-color: $color-white;
+}
+
+.accordionOpened {
+  .contentWrap {
+    max-height: 100rem;
+    transition-timing-function: cubic-bezier(0.895, 0.03, 0.685, 0.22);
+    transition-duration: 0.5s;
+    transition-property: max-height;
+  }
+
+  .content {
+    opacity: 1;
+    transform: translateY(0);
+    transition-delay: 0.2s;
+    transition-timing-function: ease-in-out;
+    transition-duration: 0.2s;
+    transition-property: opacity, transform;
+  }
+}
+
+.title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  cursor: pointer;
+  width: 100%;
+  background-color: transparent;
+  border: none;
+
+  z-index: 2;
+  position: relative;
+
+  // add you styles example
+  padding: 5px 10px;
+  border-bottom: 1px solid black;
+}
+
+// styles for drop content
+.contentWrap {
+  max-height: 0;
+  overflow: hidden;
+  transition-duration: 0.5s;
+  transition-property: max-height;
+
+  position: relative;
+  z-index: 1;
+}
+
+.content {
+  opacity: 0;
+  transform: translateY(-1rem);
+  transition-timing-function: linear, ease;
+  transition-duration: 0.1s;
+  transition-property: opacity, transform;
+  transition-delay: 0.5s;
+
+  // add you styles example
+  padding: 10px 20px;
+}

@@ -1,0 +1,139 @@
+@use 'styles' as *;
+
+.wrapper {
+  background: $orange-linear-gradient;
+}
+
+.container {
+  @include container;
+  display: flex;
+  flex-direction: column;
+  padding: 0 22px;
+
+  @include mobile {
+    padding: 0 16px;
+  }
+}
+
+.newsArticle {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  border-bottom: 1px solid $color-black;
+  padding: 24px 16px;
+  justify-content: space-between;
+  .image {
+    width: 50%;
+    padding: 23.5px 0 24.5px 39px;
+    max-width: 500px;
+    text-align: center;
+  }
+  .newsBlock {
+    height: 100%;
+    cursor: pointer;
+    width: 50%;
+    padding: 75px 44px 75px 0;
+  }
+  @include mobile {
+    flex-direction: column;
+    gap: 20зч;
+    padding: 24px 0;
+    .image {
+      padding: 0;
+      order: 1;
+      width: 80%;
+      &.image1 {
+        margin-left: auto;
+      }
+      &.image2,
+      &.image3 {
+        margin-right: auto;
+      }
+      svg {
+        width: 100%;
+      }
+    }
+    .newsBlock {
+      padding: 0;
+      order: 2;
+      width: 100%;
+    }
+  }
+}
+
+.titleBlock {
+  width: 100%;
+  border-bottom: 1px solid $color-black;
+  display: flex;
+}
+
+.title {
+  margin: 0 auto;
+  @include extraBoldText140;
+  padding: 32px 0 36.5px 0;
+
+  @include mobile {
+    @include extraBoldText90;
+    padding: 88px 0 12px 0;
+  }
+}
+
+.newsSlider {
+  border-bottom: 1px solid $color-black;
+  .newsSliderSlide {
+    cursor: pointer;
+    border-right: 1px solid $color-black;
+    &:last-child {
+      border-right: none;
+    }
+    @include mobile {
+      border-right: none;
+    }
+  }
+  .newsSliderItem {
+    padding: 75px 20px;
+    @include mobile {
+      padding: 24px 0;
+    }
+  }
+  &.sliderIsNone {
+    display: none;
+  }
+}
+
+.newsTitle {
+  @include regularText32;
+  margin-bottom: 32px;
+
+  @include mobile {
+    @include regularText14;
+    margin-bottom: 12px;
+  }
+}
+
+.newsSubtitle {
+  @include boldText40;
+
+  @include mobile {
+    @include boldText22;
+  }
+}
+
+.buttonBlock {
+  padding: 42px 0 75px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  .button {
+    width: 90.96px;
+    height: 90.96px;
+  }
+
+  @include mobile {
+    padding: 40px 0;
+    .button {
+      width: 46.4px;
+      height: 45.9px;
+    }
+  }
+}

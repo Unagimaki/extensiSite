@@ -1,0 +1,124 @@
+@mixin placeholder {
+  font-family: $font-ObjectSans;
+  font-size: 20px;
+  line-height: 20.5px;
+  font-weight: $fw-medium;
+  font-style: italic;
+}
+
+@mixin regularText14 {
+  font-family: $font-ObjectSans;
+  font-size: 14px;
+  line-height: 14.5px;
+  font-weight: $fw-regular;
+}
+
+@mixin regularText20 {
+  font-family: $font-ObjectSans;
+  font-size: 20px;
+  line-height: 20.5px;
+  font-weight: $fw-regular;
+}
+
+@mixin regularText32 {
+  font-family: $font-ObjectSans;
+  font-size: 32px;
+  line-height: 33px;
+  font-weight: $fw-regular;
+}
+
+@mixin regularText50 {
+  font-family: $font-ObjectSans;
+  font-size: 50px;
+  line-height: 60px;
+  font-weight: $fw-regular;
+}
+
+@mixin mediumText20 {
+  font-family: $font-ObjectSans;
+  font-size: 20px;
+  line-height: 24px;
+  font-weight: $fw-medium;
+}
+
+@mixin mediumText64 {
+  font-family: $font-ObjectSans;
+  font-size: 64px;
+  line-height: 66px;
+  font-weight: $fw-medium;
+}
+
+@mixin boldText20 {
+  font-family: $font-ObjectSans;
+  font-size: 20px;
+  line-height: 20.5px;
+  font-weight: $fw-bold;
+}
+@mixin mediumText20 {
+  font-family: $font-ObjectSans;
+  font-size: 20px;
+  line-height: 24px;
+  font-weight: $fw-medium;
+}
+@mixin boldText22 {
+  font-family: $font-ObjectSans;
+  font-size: 22px;
+  line-height: 23px;
+  font-weight: $fw-bold;
+}
+
+@mixin boldText30 {
+  font-family: $font-ObjectSans;
+  font-size: 30px;
+  line-height: 30px;
+  font-weight: $fw-bold;
+}
+
+@mixin boldText40 {
+  font-family: $font-ObjectSans;
+  font-size: 40px;
+  line-height: 38px;
+  font-weight: $fw-bold;
+}
+
+@mixin boldText50 {
+  font-family: $font-ObjectSans;
+  font-size: 50px;
+  line-height: 60px;
+  font-weight: $fw-bold;
+}
+
+@mixin boldText52 {
+  font-family: $font-ObjectSans;
+  font-size: 52px;
+  line-height: 62.4px;
+  font-weight: $fw-bold;
+}
+
+@mixin boldText90 {
+  font-family: $font-ObjectSans;
+  font-size: 90px;
+  line-height: 103px;
+  font-weight: $fw-bold;
+}
+
+@mixin extraBoldText90 {
+  font-family: $font-ObjectSans;
+  font-size: 90px;
+  line-height: 108px;
+  font-weight: $fw-extrabold;
+}
+
+@mixin extraBoldText90Title {
+  font-family: $font-ObjectSans;
+  font-size: 90px;
+  line-height: 79px;
+  font-weight: $fw-extrabold;
+}
+
+@mixin extraBoldText140 {
+  font-family: $font-ObjectSans;
+  font-size: 140px;
+  line-height: 168px;
+  font-weight: $fw-extrabold;
+}

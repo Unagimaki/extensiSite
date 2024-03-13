@@ -1,0 +1,92 @@
+@use 'styles' as *;
+
+.wrapper {
+  width: 100%;
+  background-color: $color-orange;
+}
+
+.title {
+  @include mediumText20;
+  padding: 36px 0 6px 0;
+  margin-bottom: 29px;
+
+  @include mobile {
+    @include regularText14;
+    padding: 24px 0;
+    margin-bottom: 0;
+  }
+}
+.newsWrapper {
+  width: 100%;
+  overflow: hidden;
+  touch-action: pan-y;
+}
+
+.content {
+  @include container;
+  padding: 0 22px;
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 0;
+  position: relative;
+
+  @include mobileMobileFirst {
+    padding-bottom: 75px;
+  }
+}
+.news {
+  width: 100%;
+  display: flex;
+  backface-visibility: hidden;
+  @include mobile {
+    flex-direction: column;
+  }
+}
+
+.newsBlock {
+  width: 100%;
+  min-width: 0;
+  flex: 0 0 45%;
+
+  padding: 24px 0;
+  border: 1px solid $color-black;
+
+  border-left: none;
+  border-right: none;
+
+  border-bottom: none;
+
+  @include mobileMobileFirst {
+    padding: 75px 24px 101px;
+    border: 1px solid $color-black;
+    cursor: pointer;
+    border-left: none;
+
+    &:first-child {
+      padding-left: 0;
+    }
+
+    &:last-child {
+      border-right: none;
+      border-bottom: 1px solid $color-black;
+    }
+  }
+}
+
+.newsTitle {
+  @include regularText14;
+  margin-bottom: 12px;
+  @include mobileMobileFirst {
+    @include regularText32;
+    margin-bottom: 32px;
+  }
+}
+
+.newsSubTitle {
+  font-size: 22px;
+  line-height: 20px;
+
+  @include mobileMobileFirst {
+    @include boldText40;
+  }
+}

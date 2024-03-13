@@ -1,0 +1,85 @@
+@use "styles" as *;
+
+.breadcrumbs{
+  @include container;
+  padding-left: 20px;
+}
+
+.container {
+  @include container;
+  padding: 6px 0 0 0;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  height: 100%;
+}
+
+.articleBanner {
+  max-width: 1232px;
+  max-height: 594px;
+  width: 100%;
+  mask: url("/assets/icons/MaskGroup.svg");
+}
+
+.topic {
+  position: absolute;
+  @include mediumText20;
+  width: 170px;
+  left: 10px;
+  bottom: -20%;
+  letter-spacing: -0.6px;
+  @include mobileMobileFirst {
+    @include mediumText20;
+    bottom: 0;
+  }
+  @media (max-width: 430px) {
+    width: 70px;
+    font-size: 9px;
+    line-height: 9.25px;
+    letter-spacing: -3%;
+    bottom: -50%;
+  }
+}
+.date {
+  width: 50%;
+  height: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  @include boldText20;
+  letter-spacing: -0.6px;
+  text-transform: uppercase;
+  position: absolute;
+  @media (max-width: 450px) {
+    font-size: 12px;
+  }
+}
+.title {
+  width: 60%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  position: absolute;
+  @include boldText40;
+  font-weight: $fw-extrabold;
+  span:nth-child(2) {
+    padding-left: 10%;
+  }
+  span:nth-child(3) {
+    padding-left: 30%;
+  }
+  span {
+    font-size: 40px;
+  }
+  @include mobileMobileFirst {
+    width: 70%;
+    @include extraBoldText90Title;
+    span {
+      font-size: 80px;
+    }
+  }
+  @media (max-width: 450px) {
+    width: 90%;
+  }
+}

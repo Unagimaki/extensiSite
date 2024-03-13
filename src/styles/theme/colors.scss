@@ -1,0 +1,48 @@
+$color-white: #fff;
+$color-black: #000;
+
+$color-orange: #ff7753;
+
+$color-yellow: #defd5e;
+$color-light-yellow: #e7ffa4;
+$color-light-yellow-e1: #f8ffe1;
+$color-light-yellow-a5: #e8ffa5;
+$color-light-yellow-a7: #e8ffa7;
+$color-light-yellow-ce: #fff8ce;
+
+$color-gray: #dcd6da;
+$color-dark-gray: #a8a6a1;
+$color-gray: #dcd6da;
+$color-light-gray: #e6e6e6;
+$color-mid-gray: #bababa;
+$color-light-green: #dcff81;
+
+$color-black-transparency: #00000060;
+$color-black-separate-60: rgba(0, 0, 0, 0.6);
+
+$yellow-linear-gradient: linear-gradient(
+  0deg,
+  rgba(255, 248, 206, 1) 0%,
+  rgba(232, 255, 167, 1) 100%
+);
+
+$orange-linear-gradient: linear-gradient(
+  0deg,
+  rgba(231, 255, 164, 1) 30%,
+  rgba(255, 119, 83, 1) 100%
+);
+$green-linear-gradient: linear-gradient(
+  0deg,
+  rgba(255, 255, 255, 1) 0%,
+  rgba(220, 255, 129, 1) 100%
+);
+$yellow-a4-linear-gradient: linear-gradient(
+  0deg,
+  rgba(231, 255, 164, 1) 0%,
+  rgba(255, 255, 255, 1) 100%
+);
+$yellow-a4-180d-linear-gradient: linear-gradient(
+  180deg,
+  rgba(231, 255, 164, 1) 0%,
+  rgba(255, 255, 255, 1) 100%
+);
